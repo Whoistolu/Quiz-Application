@@ -1,0 +1,134 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("triangle-background-27518174.png");
+}
+
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 30px 0px -15px;
+    font-family: calibri;
+    font-size: 45px;
+    text-shadow:2px 2px indigo;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.quiz_wrapper {
+    height: 450px;
+    width: 650px;
+    background-color: #70c1b3;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.quiz_wrapper .question {
+    padding: 25px;
+    background-color: #770077;
+    border-radius: 8px;
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    color: #ffffff;
+}
+.quiz_wrapper .options {
+    float: left;
+    width: 100%;
+}
+.quiz_wrapper .options ul {
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quiz_wrapper .options ul li {
+    display: inline-block;
+    background-color: #246ba1;
+    width: 44%;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 15px;
+    color: white;
+    box-shadow: 0px 3px 0px black;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+.quiz_wrapper .options ul li :active{
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+.quiz_wrapper .options ul li .correct {
+    background-color: green;
+    box-shadow: 0px 3px 0px teal;
+}
+
+.quiz_wrapper .options ul li .wrong {
+    background-color: red;
+    box-shadow: 0px 3px 0px black;
+}
+
+.quiz_wrapper .score {
+    float: left;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.quiz_wrapper .score .next {
+    width: 40%;
+    float: left;
+}
+
+.quiz_wrapper .score .next button {
+    padding: 15px 80px;
+    color: white;
+    background-color:#ff9800;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 3px 0px #ab0940;
+    outline: none;
+}
+
+.quiz_wrapper .score .score-card .next button :active {
+    box-shadow: 0px 3px 0px transparent;
+}
+
+.quiz_wrapper .score .score-card {
+    width: 60%;
+    float: left;
+}
+
+.quiz_wrapper .score .score-card {
+    font-size: 20px;
+    color: black;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.quiz_wrapper .score .score-card span {
+    background-color: #ab0940;
+    padding: 5px 20px;
+    color: #ffffff;
+    border-radius: 8px;
+    
+
+
+}
+
