@@ -56,37 +56,24 @@ var op1 = document.getElementById('op1');
                     ele.className="wrong";
                     ele.innerHTML="Wrong";
                 }
-
             },
             notClickAble:function() {
                     for (let i = 0; i < ul.children.length; i++) {
-                        ul.children[i].styleMedia.pointerEvents = "none";
-                        
-                    }
-
-                    
-            },
-
-            
+                        ul.children[i].styleMedia.pointerEvents = "none";       
+                    }      
+            }, 
             clickAble:function() {
                 for (let i = 0; i < ul.children.length; i++) {
                     ul.children[i].style.pointerEvents = "auto";
-                    ul.children[i].style.className = '';
-                    
-                }
-
-                
+                    ul.children[i].style.className = '';     
+                }     
         },
 
             score:0,
             scoreCard:function() {
                 scoreCard.innerHTML=this.questons.length+"/"+this.score;
-
             }
-
-
         }
-
 
         window.onload=app.load();
 
