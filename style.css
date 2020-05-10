@@ -1,9 +1,29 @@
+/* CSS RESET */
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
+/*
+1rem = 10px .. how?
+
+(10 / 16) * 100% = 62.5%;
+
+where: 16px = browser default
+
+*/
+
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box;
+}
 
 
 body {
-    margin: 0;
-    padding: 0;
+
     background-image: url("triangle-background-27518174.png");
 }
 
@@ -13,7 +33,7 @@ h1 {
     color: #ffffff;
     margin: 30px 0px -15px;
     font-family: calibri;
-    font-size: 45px;
+    font-size: 4em;
     text-shadow:2px 2px indigo;
 }
 
@@ -24,12 +44,12 @@ h1 {
 }
 
 .quiz_wrapper {
-    height: 450px;
-    width: 650px;
+    max-width: 650px;
+    width: 90%; 
     background-color: #70c1b3;
     border-radius: 8px;
     margin: 30px auto;
-    padding: 30px;
+    padding: 3rem;
 }
 
 .quiz_wrapper .question {
@@ -37,12 +57,12 @@ h1 {
     background-color: #770077;
     border-radius: 8px;
     font-size: 20px;
-    float: left;
+    /* float: left; */
     width: 100%;
     color: #ffffff;
 }
 .quiz_wrapper .options {
-    float: left;
+    /* float: left; */
     width: 100%;
 }
 .quiz_wrapper .options ul {
@@ -53,7 +73,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.quiz_wrapper .options ul li {
+.option {
     display: inline-block;
     background-color: #246ba1;
     width: 44%;
@@ -73,26 +93,24 @@ h1 {
     box-shadow: 0px 0px 0px 0px black;
 }
 
-.quiz_wrapper .options ul li .correct {
+.correct {
     background-color: green;
     box-shadow: 0px 3px 0px teal;
-}
+}  
 
-.quiz_wrapper .options ul li .wrong {
+ .wrong {
     background-color: red;
     box-shadow: 0px 3px 0px black;
 }
 
-.quiz_wrapper .score {
-    float: left;
-    width: 100%;
+ .score {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 25px 0;
 }
 
-.quiz_wrapper .score .next {
-    width: 40%;
-    float: left;
-}
+
 
 .quiz_wrapper .score .next button {
     padding: 15px 80px;
@@ -110,10 +128,6 @@ h1 {
     box-shadow: 0px 3px 0px transparent;
 }
 
-.quiz_wrapper .score .score-card {
-    width: 60%;
-    float: left;
-}
 
 .quiz_wrapper .score .score-card {
     font-size: 20px;
@@ -123,24 +137,24 @@ h1 {
 }
 
 .quiz_wrapper .score .score-card span {
-    background-color: #ab0940;
+    background-color:#08c805;
     padding: 5px 20px;
     color: #ffffff;
-    border-radius: 8px
+    border-radius: 8px;
 
 }
 
-/***small devices upward on lanscape***/
-@media (min-width: 576px) {
-
-}
-
-/****tablet devices upward on landscape*****/
-@media (min-width: 768px) {
-}
-
-/******desktop devices upward on landscape******/
-@media (min-width: 992px) {
-
+@media only screen and (max-width: 31.25em) {
+    /*
+    1rem = 9px. see top for explanation
+    */ 
+    html {
+        font-size: 50%; 
+    }
+    /*  Reduce padding on smaller screens. 
+    */
+    .quiz_wrapper {
+        padding: 1.5rem; 
+    }
 }
 
